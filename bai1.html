@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Người Việt tại Nga - Tin tức cộng đồng</title>
+   
+
+    <meta name="keywords" content="người Việt tại Nga, VPN Nga, Buffalo VPN, việc làm Nga, visa Nga">
+
+    <meta name="description" content="Cộng đồng người Việt tại Nga, hướng dẫn VPN, thủ tục giấy tờ, việc làm, tin tức và cuộc sống tại Nga.">
+
+    <meta name="robots" content="index,follow">
+
+    <link rel="canonical" href="https://5gvpnmobile.id.vn/">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "name":"Người Việt tại Nga",
+        "url":"https://5gvpnmobile.id.vn/",
+        "description":"Cộng đồng người Việt tại Nga, hướng dẫn VPN, việc làm và thủ tục."
+    }
+    </script>
+    <style>
+        /* Reset toàn cục */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { font-family: 'Segoe UI', Arial, sans-serif;   background-color: #e9ecef; /* xám sáng nhẹ */; color: #333; margin: 0;padding: 0; }
+        
+        /* Banner Header - Sử dụng thẻ img để không bị cắt */
+        /* Banner Header - Căn chỉnh sát */
+        .banner-header{
+            margin:0;
+            padding:0;
+            line-height:0;
+        }
+
+        .banner-header img{
+            display:block;
+            width:100%;
+            height:auto;
+            -webkit-backface-visibility: hidden;
+        }
+
+        nav { 
+            background: #333; 
+            display: flex; 
+            justify-content: center; 
+            padding: 10px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+        nav a { color: white; padding: 0 15px; text-decoration: none; font-weight: bold; }
+        
+        /* Layout */
+        .container { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 0 10px; }
+        
+        /* Tin tức */
+        .card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .card img { width: 100%; border-radius: 5px; }
+        .card h2 { margin: 10px 0; font-size: 1.4rem; }
+        
+        /* Footer */
+        footer { background: #333; color: #ccc; text-align: center; padding: 30px; margin-top: 40px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            nav { 
+                justify-content: flex-start; 
+                overflow-x: auto; 
+                white-space: nowrap; 
+                padding: 15px 10px; 
+            }
+            nav::-webkit-scrollbar { display: none; }
+            nav a { padding: 0 15px; font-size: 0.9rem; }
+        }
+        .categories {
+            max-width:1100px;
+            margin:40px auto;
+            padding:20px;
+        }
+
+        .category-box {
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+        }
+
+        .category-box div {
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .category-box div:hover {
+            transform:translateY(-5px);
+            transition:0.3s;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 35px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #ccc;
+        }
+
+        .divider span {
+            font-size: 50px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .sponsor {
+            display: flex;
+            align-items: center; /* căn giữa theo chiều dọc */
+            gap: 15px;           /* khoảng cách ảnh và chữ */
+            margin-top: 15px;
+        }
+
+        .sponsor img {
+            width: 100px;
+            height: auto;
+        }
+
+        .sponsor h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        /* Quảng cáo nổi cuối màn hình */
+        .floating-ad {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            width: 500px;
+            max-width: 90%;
+            
+            background: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            
+            padding: 15px 20px;
+            border-radius: 15px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+            z-index: 9999;
+        }
+
+
+        .floating-ad img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+
+        .ad-text {
+            flex: 1;
+        }
+
+
+        .ad-text h3 {
+            margin:0;
+            font-size:18px;
+            color:#ffffff;
+        }
+
+
+        .ad-text p {
+            margin:5px 0 0;
+            color:#ffffff;
+            font-size:14px;
+        }
+
+
+        .ad-button {
+            background:#333;
+            color:white;
+            padding:10px 15px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+
+        .ad-button:hover {
+            background:#555;
+        }
+
+
+        .close-ad {
+            position:absolute;
+            right:-8px;
+            top:-8px;
+
+            width:25px;
+            height:25px;
+
+            border:none;
+            border-radius:50%;
+
+            background:#333;
+            color:white;
+
+            cursor:pointer;
+        }
+        nav a.active {
+            color:#fbff00;
+            position:relative;
+        }
+
+
+        /* dấu hiệu bên dưới */
+        nav a.active::after {
+            content:"";
+            position:absolute;
+
+            left:50%;
+            bottom:-5px;
+
+            width: 80%;
+            height:1px;
+
+            background:#ffe600;
+
+            border-radius:5px;
+
+            transform:translateX(-50%);
+        }
+        .shorts{
+            width:315px;
+            height:560px;
+            margin:auto;
+        }
+
+        .shorts iframe{
+            width:100%;
+            height:100%;
+            border:none;
+            border-radius:12px;
+        }
+        .video{
+            position: relative;
+            width: 100%;
+            max-width: 315px;
+            aspect-ratio: 16/9;
+            margin: auto;
+        }
+
+        .video iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        .video-center{
+            display: flex;
+            justify-content: center; /* căn giữa ngang */
+            margin: 20px 0;
+        }
+        /* Bài viết SEO */
+        .article {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px 45px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+
+        /* Tiêu đề chính */
+        .article h2 {
+            text-align: center;
+            color: #0d47a1;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        /* Tiêu đề phụ */
+        .article h3 {
+            color: #222;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        /* Nội dung */
+        .article p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 18px;
+            color: #333;
+        }
+
+        /* Danh sách */
+        .article ul,
+        .article ol {
+            margin: 15px 0 20px 35px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .article li {
+            margin-bottom: 8px;
+        }
+
+
+        /* Điện thoại */
+        @media(max-width:768px){
+
+            .article {
+                padding: 20px;
+                margin: 15px;
+            }
+
+            .article h2 {
+                font-size: 25px;
+            }
+
+            .article h3 {
+                font-size: 21px;
+            }
+
+            .article p,
+            .article li {
+                font-size: 16px;
+            }
+
+        }
+        </style>
+</head>
+<body>
+
+    <header class="banner-header">
+        <img src="banner.png" alt="Người Việt tại Nga">
+    </header>
+
+    
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Trang chủ
+        </a>
+
+        <a href="congdong.html">
+            Cộng đồng
+        </a>
+
+        <a href="thutuc.html">
+            Thủ tục
+        </a>
+
+        <a href="vieclam.html">
+            Việc làm
+        </a>
+
+        <a href="thethao.html">
+            Thể thao
+        </a>
+
+        <a href="vpn.html">
+            VPN & Hướng dẫn
+        </a>
+    </nav>
+
+    <div class="divider">
+            <span>
+                <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam">
+                <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+            </span>
+    </div>
+    <h1 style="text-align:center;margin:30px 0;">
+        Người Việt tại Nga - Cộng đồng, việc làm, thủ tục và hướng dẫn VPN
+    </h1>
+
+    <div class="video-center">
+        <iframe
+            width="1200"
+            height="700"
+            src="https://www.youtube.com/embed/5jMYjcFSEC4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="divider">
+    
+    
+    <span>
+    <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam">
+    <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+    </span>
+
+    </div>
+        <div class="divider">
+    </div>
+    
+    <section class="article">
+
+    <h2>Hướng dẫn sử dụng VPN tại Nga cho người Việt</h2>
+
+    <p>
+    Hiện nay nhiều người Việt đang sinh sống, học tập và làm việc tại Nga có nhu cầu sử dụng VPN để bảo vệ thông tin cá nhân, tăng tính riêng tư khi truy cập Internet và sử dụng các dịch vụ trực tuyến. 
+    VPN là công nghệ tạo ra một kết nối an toàn giữa thiết bị của người dùng và Internet thông qua máy chủ trung gian.
+    </p>
+
+    <p>
+    Đối với cộng đồng người Việt tại Nga, việc lựa chọn một ứng dụng VPN phù hợp giúp quá trình truy cập mạng trở nên thuận tiện hơn, đặc biệt khi sử dụng điện thoại Android, iPhone hoặc máy tính Windows.
+    </p>
+
+
+    <h3>VPN là gì?</h3>
+
+    <p>
+    VPN (Virtual Private Network) là mạng riêng ảo giúp mã hóa dữ liệu khi thiết bị kết nối Internet. Khi sử dụng VPN, dữ liệu truyền tải giữa thiết bị và máy chủ VPN được bảo vệ tốt hơn, giúp hạn chế nguy cơ lộ thông tin cá nhân khi sử dụng mạng công cộng.
+    </p>
+
+    <p>
+    Ngoài mục đích bảo mật, nhiều người dùng còn sử dụng VPN để có trải nghiệm Internet ổn định hơn trong quá trình làm việc, học tập và liên lạc với gia đình.
+    </p>
+
+
+    <h3>Cách cài đặt và sử dụng VPN tại Nga</h3>
+
+    <p>
+    Việc cài đặt VPN khá đơn giản. Người dùng chỉ cần thực hiện các bước cơ bản sau:
+    </p>
+
+    <ol>
+    <li>
+    Tải ứng dụng VPN phù hợp trên điện thoại hoặc máy tính.
+    </li>
+
+    <li>
+    Đăng ký tài khoản hoặc đăng nhập nếu đã có tài khoản.
+    </li>
+
+    <li>
+    Chọn máy chủ kết nối phù hợp với nhu cầu sử dụng.
+    </li>
+
+    <li>
+    Nhấn nút kết nối và chờ ứng dụng thiết lập đường truyền.
+    </li>
+
+    <li>
+    Kiểm tra trạng thái kết nối trước khi sử dụng các dịch vụ Internet.
+    </li>
+    </ol>
+
+
+    <h3>Buffalo VPN - giải pháp kết nối dành cho người Việt tại Nga</h3>
+
+    <p>
+    Buffalo VPN là một trong những lựa chọn được giới thiệu dành cho người Việt đang sinh sống tại Nga. Ứng dụng hướng đến sự đơn giản, dễ sử dụng, phù hợp với cả người dùng mới bắt đầu làm quen với VPN.
+    </p>
+
+    <p>
+    Người dùng có thể trải nghiệm các tính năng của Buffalo VPN thông qua chương trình dùng thử miễn phí 1 tháng nếu đáp ứng điều kiện của chương trình. Sau thời gian trải nghiệm, người dùng có thể lựa chọn gói dịch vụ phù hợp với nhu cầu cá nhân.
+    </p>
+
+
+    <h3>Những lợi ích khi sử dụng VPN</h3>
+
+    <ul>
+    <li>Bảo vệ quyền riêng tư khi truy cập Internet.</li>
+    <li>Mã hóa dữ liệu trong quá trình kết nối.</li>
+    <li>Hỗ trợ sử dụng Internet an toàn hơn khi dùng WiFi công cộng.</li>
+    <li>Có thể sử dụng trên nhiều thiết bị như điện thoại và máy tính.</li>
+    <li>Giao diện đơn giản, phù hợp với nhiều đối tượng người dùng.</li>
+    </ul>
+
+
+    <h3>Lưu ý khi sử dụng VPN</h3>
+
+    <p>
+    Người dùng nên lựa chọn các dịch vụ VPN uy tín, đọc kỹ chính sách bảo mật và tránh chia sẻ thông tin tài khoản cho người khác. Tốc độ kết nối VPN có thể thay đổi tùy thuộc vào vị trí máy chủ, chất lượng mạng Internet và thiết bị sử dụng.
+    </p>
+
+
+    <h3>Câu hỏi thường gặp về VPN tại Nga</h3>
+
+    <p>
+    <strong>VPN có khó sử dụng không?</strong><br>
+    Không. Hầu hết các ứng dụng VPN hiện nay đều có giao diện đơn giản, chỉ cần vài bước là có thể kết nối.
+    </p>
+
+    <p>
+    <strong>Có thể dùng VPN trên điện thoại không?</strong><br>
+    Có. VPN hỗ trợ nhiều thiết bị như Android, iPhone, máy tính bảng và máy tính cá nhân.
+    </p>
+
+    <p>
+    <strong>Có được dùng thử VPN miễn phí không?</strong><br>
+    Một số dịch vụ có chương trình dùng thử miễn phí trong thời gian nhất định. Người dùng nên kiểm tra thông tin chương trình trước khi đăng ký.
+    </p>
+
+
+    <h3>Kết luận</h3>
+
+    <p>
+    VPN là một công cụ hữu ích giúp người Việt tại Nga bảo vệ quyền riêng tư và có trải nghiệm Internet thuận tiện hơn. Việc lựa chọn ứng dụng phù hợp, cài đặt đúng cách và sử dụng an toàn sẽ giúp người dùng tận dụng được những lợi ích mà VPN mang lại.
+    </p>
+
+    </section>
+    <footer>
+        <p>&copy; 2026 Người Việt tại Nga</p>
+    </footer>
+    <section class="categories">
+        <h2>Chuyên mục nổi bật</h2>
+        <div class="divider"></div>
+
+
+        <div class="category-box">
+            <div>
+                <img src="https://flagcdn.com/w40/ru.png" alt="Russia">
+                <h3>Cộng đồng Việt tại Nga</h3>
+                <p>Tin tức, sự kiện, hoạt động cộng đồng.</p>
+            </div>
+
+            <div>
+                <!-- Icon giấy tờ (File Alt) thay thế cho Youtube -->
+                <i class="fas fa-file-alt" style="color: #333; font-size: 24px; position: relative; top: 3px;"></i>
+                <h3>Thủ tục giấy tờ</h3>
+                <p>Hướng dẫn    visa, cư trú, hồ sơ.</p>
+            </div>
+
+            <div>
+                <i class="fas fa-briefcase" style="color: #763605; font-size: 24px; position: relative; top: 3px;"></i>
+                <h3>Việc làm</h3>
+                <p>Cơ hội việc làm cho người Việt.</p>
+            </div>
+
+            <div>
+                <i class="fab fa-youtube" style="color: #FF0000; font-size: 24px;"></i>
+                <h3>Hướng dẫn VPN</h3>
+                <p>Video cài đặt và sử dụng Buffalo VPN.</p>
+            </div>
+        </div>
+    </section>
+        <div class="floating-ad">
+        <button class="close-ad">×</button>
+
+        <img src="qc.jpg" alt="Buffalo VPN">
+
+        <div class="ad-text">
+            <h3>Buffalo VPN</h3>
+            <p>VPN tốc độ cao - Kết nối ổn định tại Nga</p>
+            <p>Miễn phí 1 tháng - cho người Việt</p>
+        </div>
+
+        <a href="#" class="ad-button">Xem ngay</a>
+    </div>
+
+    <script>
+    document.querySelector(".close-ad").onclick = function(){
+        document.querySelector(".floating-ad").style.display="none";
+    }
+    </script>
+
+    <div class="divider"></div>
+    <style>
+
+    .contact-box {
+        max-width:700px;
+        margin:30px auto;
+        text-align:center;
+        color:#ddd;
+    }
+
+
+    /* Tiêu đề */
+    .contact-box h3 {
+        color:white;
+        font-size:26px;
+        margin-bottom:30px;
+    }
+
+
+    /* Chia ô */
+    .contact-list {
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:15px;
+    }
+
+
+    /* từng ô */
+    .contact-item {
+
+        background:#ffffff;
+        padding:18px 10px;
+
+        border-radius:15px;
+
+        transition:0.3s;
+
+        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    }
+
+
+    .contact-item:hover {
+
+        transform:translateY(-8px);
+
+        background:#0000001e;
+    }
+
+
+    /* icon tròn */
+    .contact-icon {
+
+        width:55px;
+        height:55px;
+
+        margin:0 auto 12px;
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+        border-radius:50%;
+
+        font-size:25px;
+
+        color:white;
+    }
+
+
+    /* màu từng app */
+    .admin {
+        background:#ffc107;
+    }
+
+    .zalo {
+        background:#0084ff;
+    }
+
+    .telegram {
+        background:#229ED9;
+    }
+
+    .whatsapp {
+        background:#25D366;
+    }
+
+
+
+    /* chữ */
+    .contact-item p {
+
+        margin:5px 0;
+
+        font-size:14px;
+
+        color:#000000;
+    }
+
+
+    .contact-item b {
+
+        color:rgb(0, 0, 0);
+
+        display:block;
+
+        margin-bottom:5px;
+    }
+    .contact-item {
+        text-decoration:none;
+        color:white;
+        display:block;
+    }
+
+
+    /* mobile */
+    @media(max-width:768px){
+
+        .contact-list {
+            grid-template-columns:repeat(2,1fr);
+        }
+
+    }
+    
+
+    </style>
+
+
+    <div class="contact-box">
+
+    <div style="text-align:center; color:rgb(0, 0, 0); font-size:24px; font-weight:bold; margin-bottom:25px;">
+        ☎ Thông tin liên hệ Admin
+    </div>
+
+    <div class="contact-list">
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon admin">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <b>Admin</b>
+            <p>Người Việt tại Nga</p>
+
+        </div>
+
+
+        <a class="contact-item" href="https://zalo.me/0963077533" target="_blank">
+
+            <div class="contact-icon zalo">
+                <img src="zalo.png" alt="Zalo">
+            </div>
+
+            <b>Zalo</b>
+            <p>Nhấn vào đây</p>
+
+        </a>
+
+        <a class="contact-item" href="https://t.me/Meta_Support_ThanhLong" target="_blank">
+
+            <div class="contact-icon telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+
+            <b>Telegram</b>
+            <p>@Meta_Support_ThanhLong</p>
+
+        </a>
+
+
+        <a class="contact-item" href="https://wa.me/84963077533" target="_blank">
+
+            <div class="contact-icon whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <b>WhatsApp</b>
+            <p>Nhấn vào đây</p>
+
+        </a>
+
+
+    </div>
+
+    </div>
+    <script>
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('nav a');
+        menuItem.forEach(item => {
+            if(item.href === currentLocation){
+                item.classList.add('active');
+            }
+        });
+    </script>
+   
+
+
+</body>
+</html>
